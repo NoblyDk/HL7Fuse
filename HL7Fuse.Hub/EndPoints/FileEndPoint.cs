@@ -40,7 +40,10 @@ namespace HL7Fuse.Hub.EndPoints
         {
             try
             {
-                string path = outputDir + GetFileName(msg);
+                var directory = Path.Combine(outputDir);
+                Directory.CreateDirectory(directory);
+                var path = Path.Combine(directory, GetFileName(msg));
+                
                 using (StreamWriter sw = new StreamWriter(File.OpenWrite(path)))
                 {
                     PipeParser parser = new PipeParser();
@@ -60,7 +63,7 @@ namespace HL7Fuse.Hub.EndPoints
         private string GetFileName(IMessage msg)
         {
             // Format filename as yyyyMMDD_HHmmSS_EVENTNAME.HL7
-            return string.Format("{0}_{1}_{2}.HL7", DateTime.Now.ToString("yyyyMMdd"), DateTime.Now.ToString("HHmmssfff"), msg.GetStructureName());
+            return $"{DateTime.Now:yyyyMMdd}_{DateTime.Now:HHmmssfff}_{msg.GetStructureName()}.HL7";
         }
         #endregion
     }
