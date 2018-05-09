@@ -153,6 +153,16 @@
     <Compile Include="V231\MessageFactoryFile.cs" />
     <Compile Include="V23\MessageFactoryFile.cs" />
     <Compile Include="V24\MessageFactoryFile.cs" />
+    <Compile Include="V27\MessageFactoryFile.cs" />
+    <Compile Include="V27\MessageFactoryMLLP.cs" />
+    <Compile Include="V271\MessageFactoryFile.cs" />
+    <Compile Include="V271\MessageFactoryMLLP.cs" />
+    <Compile Include="V28\MessageFactoryFile.cs" />
+    <Compile Include="V28\MessageFactoryMLLP.cs" />
+    <Compile Include="V281\MessageFactoryFile.cs" />
+    <Compile Include="V281\MessageFactoryMLLP.cs" />
+    <Compile Include="V26\MessageFactoryFile.cs" />
+    <Compile Include="V26\MessageFactoryMLLP.cs" />
     <Compile Include="V251\MessageFactoryFile.cs" />
     <Compile Include="V251\MessageFactoryMLLP.cs" />
     <Compile Include="EndPoints\BaseEndPoint.cs" />
